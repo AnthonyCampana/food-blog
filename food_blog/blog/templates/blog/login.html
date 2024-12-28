@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="author" content="Anthony Campana">
+        <meta name="description" content="This is a blog to document all food created and eaten by the author">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="robots" content="index, nofollow">
+        <title> Alexander's food excursion - Login </title>
+        <link rel="stylesheet" href="{% static 'blog/styles/login.css' %}">
+    </head>
+    <body >
+        <nav>
+            <div class="homepage-link">
+                <a href=" {% url 'index'%}">Alexander taste excursion</a>
+            </div>
+            <div class="login-link">
+                <a href="{% url 'login' %}"> login </a>
+            </div>
+        </nav>
+        <video src="../../static/blog/assets/grain.mp4" muted autoplay loop></video>
+        <main>
+            <div class="form-background">
+                <form action="">
+                    {% csrf_token %}
+
+                    <h3 class="form-header"> Login </h3>
+
+                    <fieldset class="field-inputs">
+                        <p class="name-input">
+                            <label class="name-input-label" for="userName"> Username: </label>
+                            <input class="name-input-field" type="text" name="username" id="userName">
+                        </p>
+                        <p class="password-input">
+                            <label class="password-input-label" for="password">Password: </label>
+                            <input class="password-input-field" type="text" name="password" id="password">
+                        </p>
+                    </fieldset>
+
+                    <p class="create-account-link">Don't have an account ? <a href="{% url 'register' %}"> create one </a> </p>
+
+                    <input class="submit-button" type="submit" value="Submit">
+                </form>
+
+            </div>
+        </main>
+    </body>
+</html>

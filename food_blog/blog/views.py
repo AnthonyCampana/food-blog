@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.http import Http404
 from django.http import HttpResponse
 
 def index(request):
@@ -8,7 +9,7 @@ def profile(request):
     return HttpResponse("This is the profile page")
 
 def register(request):
-    return HttpResponse("This is the registration page")
+    return render(request, "blog/register.html")
 
 def login(request):
-    return HttpResponse("This is the login page")
+    return render(request, "blog/login.html")
