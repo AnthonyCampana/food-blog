@@ -3,7 +3,7 @@ from django.http import Http404
 from django.http import HttpResponse
 
 def index(request):
-    return HttpResponse("This is the index page")
+    return render(request, "blog/index.html")
 
 def profile(request):
     return HttpResponse("This is the profile page")
