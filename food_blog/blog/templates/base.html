@@ -8,6 +8,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <meta name="robots" content="index, nofollow">
         <title> Alexander's food excursion - Login </title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'blog/styles/base.css' %}">
         {% block stylesheet %}
         {% endblock %}
     </head>
@@ -20,8 +22,10 @@
                 <a href="{% url 'login' %}"> login </a>
             </div>
         </nav>
+
         {% block backgroundVideo %}
         {% endblock %}
+
         <main>
             {% block main %}
             {% endblock %}
