@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="author" content="Anthony Campana">
+        <meta name="description" content="This is a blog to document all food created and eaten by the author">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="robots" content="index, nofollow">
+        <title> Alexander's food excursion - Login </title>
+        {% block stylesheet %}
+        {% endblock %}
+    </head>
+    <body>
+        <nav>
+            <div class="homepage-link">
+                <a href=" {% url 'index'%}">Alexander taste excursion</a>
+            </div>
+            <div class="login-link">
+                <a href="{% url 'login' %}"> login </a>
+            </div>
+        </nav>
+        {% block backgroundVideo %}
+        {% endblock %}
+        <main>
+            {% block main %}
+            {% endblock %}
+        </main>
+    </body>
+</html>
