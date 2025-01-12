@@ -14,25 +14,14 @@
 
                 <h3 class="form-header"> Register </h3>
 
+                {% for field in form %}
                 <fieldset class="field-inputs">
-                    <p class="name-input">
-                        <label class="name-input-label" for="userName"> Username: </label>
-                        <input class="name-input-field" type="text" name="username" id="userName">
-                    </p>
-                    <p class="password-input">
-                        <label class="password-input-label" for="password">Password: </label>
-                        <input class="password-input-field" type="text" name="password" id="password">
-                    </p>
-                    <p class="retype-password-input">
-                        <label class="retype-password-input-label" for="retype-password">Re-enter Password: </label>
-                        <input class="retype-password-input-field" type="text" name="retype-password" id="retype-password">
-                    </p>
-                    <p class="email-input">
-                        <label class="email-input-label" for="email">Email: </label>
-                        <input class="email-input-field" type="text" name="email" id="email">
+                    <p class="input">
+                        {{ field.label_tag }} {{ field }}
                     </p>
                 </fieldset>
-
+                {% endfor %}
+                
                 <input class="submit-button" type="submit" value="Submit">
             </form>
         </div>
