@@ -19,11 +19,13 @@
                 <div class="homepage-link">
                     <a href=" {% url 'index'%}">Alexander taste excursion</a>
                 </div>
-                <div class="postList-link">
-                    <a href="{% url 'login' %}"> Posts </a>
-                </div>
-                <div class="logout-link">
-                    <a href="{% url 'logout' %}"> logout </a>
+                <div class="related-links-container">
+                    <div class="postList-link">
+                        <a href="{% url 'postLister' %}"> Posts </a>
+                    </div>
+                    <div class="logout-link">
+                        <a href="{% url 'logout' %}"> logout </a>
+                    </div>
                 </div>
             </nav>
         {% else %}
@@ -45,5 +47,10 @@
             {% block main %}
             {% endblock %}
         </main>
+        {% block scripts %}
+        {% endblock %}
     </body>
+   <footer>
+
+   </footer> 
 </html>

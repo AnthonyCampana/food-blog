@@ -15,10 +15,18 @@ nav {
 
 a {
     text-decoration: none;
+    color: inherit;
 }
 
 .homepage-link {
     margin-left: 1.5%;
+}
+
+.related-links-container {
+    display: flex ;
+    justify-content: space-between;
+    width: 8%;
+    margin: 1.5%;
 }
 
 .login-link {

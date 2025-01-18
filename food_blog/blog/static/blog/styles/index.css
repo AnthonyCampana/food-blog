@@ -1,0 +1,157 @@
+a {
+    color: inherit;
+}
+
+.carousel-container {
+    height: 600px;
+}
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+    height: 600px;
+}
+
+.carousel-track-container {
+    position: relative;
+    overflow: hidden;
+    height: 600px;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+    height: 100%;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: fill;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%);
+    background: rgba(0,0,0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 0.5em 1em;
+    z-index: 1;
+}
+
+.carousel-button-left {
+    left: 10px;
+}
+
+.carousel-button-right {
+    right: 10px;
+}
+
+.about-me-container {
+    height: 600px;
+    width: 100%;
+    background-color: #C56824;
+    display: flex;
+}
+
+.about-me-photo-container {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-me-photo {
+    width: 75%;
+    height: 75%;
+
+}
+
+.about-me-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-me-info-container {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-me {
+    height: 75%;
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-me-title {
+    height: auto;
+    width: auto;
+    margin-bottom: 5%;
+    font-size: 45px;
+}
+
+.about-me-text {
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.post-info-container {
+    width: 100%;
+    height: 600px;
+    background-color: #A09F57;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.post-info {
+    height: 75%;
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.post-info-title {
+    width: auto;
+    height: auto;
+    font-size: 45px;
+    margin-bottom: 3%;
+}
+
+.post-info-description {
+    font-size: 20px;
+    margin-bottom: 3%;
+    line-height: 24px;
+}
+
+.post-info-link {
+    height: 18%;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    border-radius: 10px;
+    background-color: #EADEB8;
+}
+
+
+
+

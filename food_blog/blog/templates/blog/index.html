@@ -3,9 +3,78 @@
 
 {% block stylesheet %}
 {% load static %}
-<link rel="stylesheet" link="{% static 'blog/styles/index.css' %}">
+<link rel="stylesheet" href="{% static 'blog/styles/index.css' %}">
 {% endblock %}
 
 {% block main %}
+    <div class="carousel-container">
+        <div class="carousel">
+            <div class="carousel-track-container">
+                <div class="carousel-track">
+                    <div class="carousel-slide">
+                        <img src="{% static 'blog/assets/pad_thai_1(resize).jpg' %}" alt="food image 1">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="" alt="food image 2">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="" alt="food image 3">
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-button carousel-button-left"> &lt; </button>
+            <button class="carousel-button carousel-button-right"> &gt; </button>
+        </div>
+    </div>
+    <div class="about-me-container">
+        <div class="about-me-photo-container">
+            <div class="about-me-photo">
+                <img src="{% static 'blog/assets/placeholder_image.jpg' %}" alt=" chef image ">
+            </div>
+        </div>
+        <div class="about-me-info-container">
+            <div class="about-me">
+                <h1 class="about-me-title"> About Me </h1>
+                <p class="about-me-text">
+                    Lorem ipsum odor amet, consectetuer adipiscing elit. 
+                    Nulla semper vehicula dictum aliquet, proin potenti. 
+                    Elit eros adipiscing sem dictumst duis. 
+                    Porttitor placerat cras orci fermentum augue! 
+                    Adipiscing odio accumsan facilisis viverra nam. 
+                    Dui luctus efficitur elit mauris; leo ipsum at. 
+                    Metus varius pretium ac cras efficitur vel curae venenatis commodo. 
+                    Nulla sociosqu vehicula vivamus nisi rhoncus erat.
+                    Parturient curabitur pulvinar suspendisse nunc fusce imperdiet sagittis. 
+                    Amet ligula vitae justo metus viverra ligula. 
+                    Eget porttitor penatibus mauris platea luctus adipiscing. 
+                    Ultricies tempus at nisi efficitur scelerisque sollicitudin maximus. 
+                    Aliquam ad congue laoreet dapibus accumsan non torquent dapibus dui. 
+                    Commodo lobortis tortor proin facilisis morbi odio dictum lacus faucibus. 
+                    Dictum est varius pharetra velit aliquam. 
+                    Mattis accumsan et ut lacinia venenatis nulla.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="post-info-container">
+        <div class="post-info">
+            <h1 class="post-info-title"> See all Posts </h1>
+            <p class="post-info-description">
+                Lorem ipsum odor amet, consectetuer adipiscing elit. 
+                Rhoncus tellus convallis tempus parturient non. 
+                Massa class praesent habitasse volutpat platea? 
+                Mauris parturient ex pellentesque elit quis eu eu. 
+                Vestibulum etiam ex rhoncus primis vel dui magnis. 
+                Fames nulla luctus dictumst arcu dictumst dictum primis. 
+                Orci risus nostra ex cras dolor semper. 
+                Nec vestibulum malesuada eu mauris class varius platea. 
+                Donec scelerisque eu facilisi suscipit natoque quisque potenti.
+            </p> 
+            <a href= "{% url 'postLister' %}" class="post-info-link"> Read More !</a>
+        </div>
+    </div>
+{% endblock %}
 
+{% block scripts %}
+<script src="{% static 'blog/js/carouselController.js' %}"></script>
 {% endblock %}
