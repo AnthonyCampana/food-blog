@@ -1,0 +1,24 @@
+{% extends "base.html"%}
+
+{% block main %}
+    <p>This is dummy text </p>
+
+    {% if not user.is_authenticated %}
+
+        <p>This user is not authenticated </p>
+
+
+    {% else %}
+        <p> This is before the for loop </p>
+        {% for post in posts %}
+            <div class="post-container">
+                <p> {{ post.author }} </p>
+                <p> {{ post.title }} </p>
+                <p> {{ post.likes }} </p>
+
+            </div>
+        {% endfor %}
+
+        <p>This user is authenticated </p>
+    {% endif %}
+{% endblock %}
