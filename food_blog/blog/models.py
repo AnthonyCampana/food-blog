@@ -7,7 +7,7 @@ from django.utils import timezone
 class Post(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     title = models.CharField(max_length=32)
-    ##image =
+    image = models.ImageField(upload_to="uploads/", null=True, blank=True)
     likes = models.IntegerField(default=0)
     date_posted = models.DateTimeField("date published")
     description = models.TextField()
